@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>hexo+github搭建博客简易教程 | 世界最高城理塘</title>
+  <meta name="description" content="1.创建仓库1.1 新建仓库在Github上创建仓库，名字为username.github.io（username是你的github用户名） 类型public，勾选Add a README file（不勾也可以） 1.2 测试模板在仓库的settings里，左边的Pages选项卡，选择Choose a theme 随便选择一个，然后Select后，Commit changes。 这时候测试访问us">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo+github搭建博客简易教程">
+<meta property="og:url" content="http://edcc1015.github.io/2022/06/21/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="世界最高城理塘">
+<meta property="og:description" content="1.创建仓库1.1 新建仓库在Github上创建仓库，名字为username.github.io（username是你的github用户名） 类型public，勾选Add a README file（不勾也可以） 1.2 测试模板在仓库的settings里，左边的Pages选项卡，选择Choose a theme 随便选择一个，然后Select后，Commit changes。 这时候测试访问us">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/edcc1015/image/main/image-20220621124810685.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/edcc1015/image/main/image-20220621130550715.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/edcc1015/image/main/image-20220621214457320.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/edcc1015/image/main/image-20220622011420252.png">
+<meta property="article:published_time" content="2022-06-21T04:18:32.000Z">
+<meta property="article:modified_time" content="2022-06-21T17:36:30.396Z">
+<meta property="article:author" content="edcc">
+<meta property="article:tag" content="github">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/edcc1015/image/main/image-20220621124810685.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://edcc1015.github.io/2022/06/21/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="世界最高城理塘" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://space.bilibili.com/3222286" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">edcc</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">CSU在读老鼠</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Chengdu, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/edcc1015" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/408%E8%80%83%E7%A0%94/" rel="tag">408考研</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91/" rel="tag">树</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/408%E8%80%83%E7%A0%94/" style="font-size: 13px;">408考研</a> <a href="/tags/github/" style="font-size: 13px;">github</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 13px;">数据结构</a> <a href="/tags/%E6%A0%91/" style="font-size: 13px;">树</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2022/07/04/408%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%A0%91/" class="title">408笔记——数据结构树</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-07-04T10:04:53.000Z" itemprop="datePublished">2022-07-04</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a>
+              </p>
+              <p class="item-title">
+                <a href="/2022/06/21/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/" class="title">hexo+github搭建博客简易教程</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-06-21T04:18:32.000Z" itemprop="datePublished">2022-06-21</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2022/06/05/hello-world/" class="title">Hello World</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-06-05T10:32:53.000Z" itemprop="datePublished">2022-06-05</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-hexo-github搭建博客简易教程" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo+github搭建博客简易教程
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2022/06/21/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/" class="article-date">
+	  <time datetime="2022-06-21T04:18:32.000Z" itemprop="datePublished">2022-06-21</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/github/" rel="tag">github</a>, <a class="article-tag-link-link" href="/tags/hexo/" rel="tag">hexo</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/06/21/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="1-创建仓库"><a href="#1-创建仓库" class="headerlink" title="1.创建仓库"></a>1.创建仓库</h1><h2 id="1-1-新建仓库"><a href="#1-1-新建仓库" class="headerlink" title="1.1 新建仓库"></a>1.1 新建仓库</h2><p>在Github上创建仓库，名字为<strong>username.github.io</strong>（username是你的github用户名）</p>
+<p>类型public，勾选Add a README file（不勾也可以）</p>
+<h2 id="1-2-测试模板"><a href="#1-2-测试模板" class="headerlink" title="1.2 测试模板"></a>1.2 测试模板</h2><p>在仓库的settings里，左边的Pages选项卡，选择Choose a theme</p>
+<p>随便选择一个，然后Select后，Commit changes。</p>
+<p>这时候测试访问username.github.io，便可以看到刚刚的网页，即你选择的模板</p>
+<h1 id="2-环境准备与配置"><a href="#2-环境准备与配置" class="headerlink" title="2.环境准备与配置"></a>2.环境准备与配置</h1><h2 id="2-1-node-js"><a href="#2-1-node-js" class="headerlink" title="2.1 node.js"></a>2.1 node.js</h2><p><a target="_blank" rel="noopener" href="http://nodejs.cn/">http://nodejs.cn/</a> #下载地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm --version #验证是否安装成功</span><br></pre></td></tr></table></figure>
+
+<p>弹出版本号，则说明安装成功</p>
+<p><img src="https://raw.githubusercontent.com/edcc1015/image/main/image-20220621124810685.png" alt="image-20220621124810685"></p>
+<h2 id="2-2-Git"><a href="#2-2-Git" class="headerlink" title="2.2 Git"></a>2.2 Git</h2><p><a target="_blank" rel="noopener" href="https://gitforwindows.org/">https://gitforwindows.org/</a> #下载地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version #验证是否安装成功</span><br></pre></td></tr></table></figure>
+
+<p>同样，输出版本号，则说明安装成功</p>
+<h2 id="2-3-Git设置"><a href="#2-3-Git设置" class="headerlink" title="2.3 Git设置"></a>2.3 Git设置</h2><p>在桌面右键菜单里面点击Git Bash Here</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的Github用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的Github注册邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;你的Github注册邮箱&quot;</span><br><span class="line">ssh git@github.com #获得密钥</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-1-验证邮箱和用户名"><a href="#2-3-1-验证邮箱和用户名" class="headerlink" title="2.3.1 验证邮箱和用户名"></a>2.3.1 验证邮箱和用户名</h3><p>在设置完用户名和注册邮箱时，使用git config –global user.name以及git config –global user.email来验证是否设置成功</p>
+<h3 id="2-3-2-获取配置SSH密钥"><a href="#2-3-2-获取配置SSH密钥" class="headerlink" title="2.3.2 获取配置SSH密钥"></a>2.3.2 获取配置SSH密钥</h3><p>在ssh-keygen -t rsa -C “邮箱” 命令输入后，根据提示敲击回车，最后操作完成后，在所提示的目录里面找到sshkey，例如我的是在 “<strong>C:\Users\Yurisa\.ssh</strong>“ 里面，里面有个 “<strong>id_rsa.pub</strong>“ 文件，用记事本打开（密钥的最后应该是你刚刚输入的邮箱），复制该密钥</p>
+<p>在Settings&#x2F;SSH and GPG keys里新建一个SSH key（右上角的New SSh key）</p>
+<p><img src="https://raw.githubusercontent.com/edcc1015/image/main/image-20220621130550715.png" alt="image-20220621130550715"></p>
+<p>title随便写，下面填你刚刚复制的密钥</p>
+<h3 id="2-3-3-配置-Github-tokens"><a href="#2-3-3-配置-Github-tokens" class="headerlink" title="2.3.3 配置 Github  tokens"></a>2.3.3 配置 Github  tokens</h3><p>在Settings&#x2F;Developer settings&#x2F;Personal access tokens，点击Generate new token</p>
+<p>Note随便填写，Expiration是你的token有效时间，下面勾选repo，然后点击Generate token</p>
+<p><img src="https://raw.githubusercontent.com/edcc1015/image/main/image-20220621214457320.png" alt="image-20220621214457320"></p>
+<p>点击后会给你一个ghp_XXX开头的token，复制下来（保存下来，不要搞丢了）</p>
+<h2 id="2-4-安装Hexo框架"><a href="#2-4-安装Hexo框架" class="headerlink" title="2.4 安装Hexo框架"></a>2.4 安装Hexo框架</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli #安装hexo框架</span><br></pre></td></tr></table></figure>
+
+<p>在你存放博客的文件夹，右键菜单中点击Git Bash Here</p>
+<h3 id="2-4-1-本地部署"><a href="#2-4-1-本地部署" class="headerlink" title="2.4.1 本地部署"></a>2.4.1 本地部署</h3><p>在你存放博客的文件夹，右键菜单中点击Git Bash Here</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init #部署本地博客</span><br><span class="line">#这条命令执行后就会在你的文件夹里生成博客的文件</span><br><span class="line">npm install hexo-deployer-git --save #安装hexo-deployer-git插件</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo s #启动服务浏览 </span><br><span class="line">hexo server #两条命令的作用都是一样的</span><br><span class="line">//输入http://localhost:4000/即可看到效果页面 Ctrl+C可以停止</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/edcc1015/image/main/image-20220622011420252.png" alt="image-20220622011420252"></p>
+<h3 id="2-4-2-创建新文章"><a href="#2-4-2-创建新文章" class="headerlink" title="2.4.2 创建新文章"></a>2.4.2 创建新文章</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;文章名字&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在你本地部署init文件夹里 “<strong>\source_posts</strong>“ 里就会创建一个md格式的文件，可以用markdown编辑器打开</p>
+<h3 id="2-4-3-config-yml文件"><a href="#2-4-3-config-yml文件" class="headerlink" title="2.4.3 _config.yml文件"></a>2.4.3 _config.yml文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">以下是网站信息</span><br><span class="line"># Site </span><br><span class="line">title: 世界最高城理塘</span><br><span class="line">subtitle: &#x27;&#x27;</span><br><span class="line">description: edcc的博客</span><br><span class="line">keywords:</span><br><span class="line">author: edcc</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/username/username.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<p><strong>deploy一栏一定要修改</strong></p>
+<h3 id="2-4-4-部署到Github服务器"><a href="#2-4-4-部署到Github服务器" class="headerlink" title="2.4.4 部署到Github服务器"></a>2.4.4 部署到Github服务器</h3><p>各种东西修改完成保存后就可以在git的窗口里面输入以下指令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>hexo g &#x3D;&#x3D; hexo generate #生成</p>
+<p>hexo d &#x3D;&#x3D; hexo deploy #部署</p>
+<p>在上传的时候可能会github会弹出窗口让你输入凭证，可以选择输入token，即ghp_XX（2.3.3步骤里）那个token</p>
+<p>输入完指令后等几分钟，进入你博客的网址，username.github.io就会看到更新后的内容了。</p>
+<h1 id="3-网站主题更换"><a href="#3-网站主题更换" class="headerlink" title="3.网站主题更换"></a>3.网站主题更换</h1><p>可以在github上面搜索<strong>hexo theme</strong>，会有很多主题模板，一般他们的仓库里的README.md里都有教程如何替换，一般都是在博客文件夹里输入 git clone xxxxxxx</p>
+<p>然后再_config.yml里面更改</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://edcc1015.github.io/2022/06/21/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/" title="hexo+github搭建博客简易教程" target="_blank" rel="external">http://edcc1015.github.io/2022/06/21/hexo-github搭建博客简易教程/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://space.bilibili.com/3222286" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://space.bilibili.com/3222286" target="_blank"><span class="text-dark">edcc</span><small class="ml-1x">CSU在读老鼠</small></a></h3>
+        <div>没什么好简介的。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2022/07/04/408%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%A0%91/" title="408笔记——数据结构树"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2022/06/05/hello-world/" title="Hello World"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/edcc1015" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
