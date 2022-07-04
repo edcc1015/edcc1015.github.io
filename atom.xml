@@ -6,7 +6,7 @@
   <link href="http://edcc1015.github.io/atom.xml" rel="self"/>
   
   <link href="http://edcc1015.github.io/"/>
-  <updated>2022-07-04T12:06:06.738Z</updated>
+  <updated>2022-07-04T15:58:32.114Z</updated>
   <id>http://edcc1015.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Failed to connect to github.com port 443: Connection refused解决方法</title>
+    <link href="http://edcc1015.github.io/2022/07/04/Failed-to-connect-to-github-com-port-443-Connection-refused%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>http://edcc1015.github.io/2022/07/04/Failed-to-connect-to-github-com-port-443-Connection-refused%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
+    <published>2022-07-04T15:52:59.000Z</published>
+    <updated>2022-07-04T15:58:32.114Z</updated>
+    
+    <content type="html"><![CDATA[<p>在<code>clone</code>，<code>pull</code>，<code>push</code>时候可能会出现以下情况</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Failed to connect to github.com port 443: Connection refused</span><br></pre></td></tr></table></figure><p>可以输入以下命令解决</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:端口号</span><br><span class="line">git config --global https.proxy http://127.0.0.1:端口号</span><br></pre></td></tr></table></figure><p>端口号是你的代理的端口号，比如我开的代理是Netch，端口号就写<code>2802</code></p><p><img src="https://raw.githubusercontent.com/edcc1015/image/main/202207042356672.png" alt="image-20220704235617660"></p><p>若无效，以下代码可以删除刚刚的配置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在&lt;code&gt;clone&lt;/code&gt;，&lt;code&gt;pull&lt;/code&gt;，&lt;code&gt;push&lt;/code&gt;时候可能会出现以下情况&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="杂项" scheme="http://edcc1015.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    
+    <category term="github" scheme="http://edcc1015.github.io/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>408笔记——数据结构树</title>

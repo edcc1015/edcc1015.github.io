@@ -17,18 +17,23 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档: 2022/6 | 世界最高城理塘</title>
-  <meta name="description" content="edcc的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="世界最高城理塘">
-<meta property="og:url" content="http://edcc1015.github.io/archives/2022/06/index.html">
+  <title>Failed to connect to github.com port 443: Connection refused解决方法 | 世界最高城理塘</title>
+  <meta name="description" content="在clone，pull，push时候可能会出现以下情况 1Failed to connect to github.com port 443: Connection refused  可以输入以下命令解决 12git config --global http.proxy http:&#x2F;&#x2F;127.0.0.1:端口号git config --global https.proxy http:&#x2F;&#x2F;127.0.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Failed to connect to github.com port 443: Connection refused解决方法">
+<meta property="og:url" content="http://edcc1015.github.io/2022/07/04/Failed-to-connect-to-github-com-port-443-Connection-refused%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="世界最高城理塘">
-<meta property="og:description" content="edcc的博客">
+<meta property="og:description" content="在clone，pull，push时候可能会出现以下情况 1Failed to connect to github.com port 443: Connection refused  可以输入以下命令解决 12git config --global http.proxy http:&#x2F;&#x2F;127.0.0.1:端口号git config --global https.proxy http:&#x2F;&#x2F;127.0.">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/edcc1015/image/main/202207042356672.png">
+<meta property="article:published_time" content="2022-07-04T15:52:59.000Z">
+<meta property="article:modified_time" content="2022-07-04T15:58:32.114Z">
 <meta property="article:author" content="edcc">
+<meta property="article:tag" content="github">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/edcc1015/image/main/202207042356672.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://edcc1015.github.io/archives/2022/06/index.html">
+  <link rel="canonical" href="http://edcc1015.github.io/2022/07/04/Failed-to-connect-to-github-com-port-443-Connection-refused%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/index.html">
   
     <link rel="alternate" href="/atom.xml" title="世界最高城理塘" type="application/atom+xml">
   
@@ -303,58 +308,140 @@
   
   
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档: 2022/6</h1>
-	      <p class="text-muted">共 4 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
-  
-  
+  <div class="content">
+  <article id="post-Failed-to-connect-to-github-com-port-443-Connection-refused解决方法" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-    
+    <div class="article-header">
       
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Failed to connect to github.com port 443: Connection refused解决方法
+    </h1>
+  
+
       
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2022" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2022
-            </a>
-            <!-- <a href="/archives/2022" class="archive-year">2022</a> -->
-          </h3>
-        </div>
-        <div id="collapse2022" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2022">
-        <div class="panel-body">
-          <div class="collection">
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2022/07/04/Failed-to-connect-to-github-com-port-443-Connection-refused%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" class="article-date">
+	  <time datetime="2022-07-04T15:52:59.000Z" itemprop="datePublished">2022-07-04</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/github/" rel="tag">github</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/07/04/Failed-to-connect-to-github-com-port-443-Connection-refused%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>在<code>clone</code>，<code>pull</code>，<code>push</code>时候可能会出现以下情况</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Failed to connect to github.com port 443: Connection refused</span><br></pre></td></tr></table></figure>
+
+<p>可以输入以下命令解决</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:端口号</span><br><span class="line">git config --global https.proxy http://127.0.0.1:端口号</span><br></pre></td></tr></table></figure>
+
+<p>端口号是你的代理的端口号，比如我开的代理是Netch，端口号就写<code>2802</code></p>
+<p><img src="https://raw.githubusercontent.com/edcc1015/image/main/202207042356672.png" alt="image-20220704235617660"></p>
+<p>若无效，以下代码可以删除刚刚的配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
     
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://edcc1015.github.io/2022/07/04/Failed-to-connect-to-github-com-port-443-Connection-refused%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="Failed to connect to github.com port 443: Connection refused解决方法" target="_blank" rel="external">http://edcc1015.github.io/2022/07/04/Failed-to-connect-to-github-com-port-443-Connection-refused解决方法/</a>
+    </li>
     
-<a href="/2022/06/21/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/" class="collection-item"   itemprop="url">
-  <time datetime="2022-06-21T04:18:32.000Z" itemprop="datePublished">2022-06-21</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> hexo+github搭建博客简易教程
-</a>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://space.bilibili.com/3222286" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://space.bilibili.com/3222286" target="_blank"><span class="text-dark">edcc</span><small class="ml-1x">CSU在读老鼠</small></a></h3>
+        <div>没什么好简介的。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
 
 
   
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
     
     
+    <li class="next">
+      <a href="/2022/07/04/408%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%A0%91/" title="408笔记——数据结构树"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
     
-<a href="/2022/06/05/hello-world/" class="collection-item"   itemprop="url">
-  <time datetime="2022-06-05T10:32:53.000Z" itemprop="datePublished">2022-06-05</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Hello World
-</a>
-
-
+    
+  </ul>
   
   
-    </div></div></div></section>
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
   
 
-	    </div>
-  	</article>
-  	 	
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -409,6 +496,39 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 
