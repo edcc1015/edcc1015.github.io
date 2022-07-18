@@ -6,8 +6,8 @@ http://edcc1015.github.io/links/index.html
 http://edcc1015.github.io/about/index.html
 http://edcc1015.github.io/tags/index.html
 http://edcc1015.github.io/repository/index.html
-http://edcc1015.github.io/categories/index.html
 http://edcc1015.github.io/books/index.html
+http://edcc1015.github.io/categories/index.html
 http://edcc1015.github.io/404.html
 http://edcc1015.github.io/
 http://edcc1015.github.io/tags/github/
